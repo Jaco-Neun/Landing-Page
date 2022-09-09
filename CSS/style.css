@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:  100px auto auto auto auto 250px;
+    grid-template-areas:
+    "nav nav nav"
+    "sidebar article blog1"
+    "sidebar article blog2"
+    "sidebar article blog3"
+    "pvm pvm pvm"
+    "ft ft ft";
+    gap: 1em;
+    row-gap: 3em;
+    }
+
+      /*Nav List*/
+    .ulNav{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .active{
+      background-color: rosybrown;
+      color: black;
+    }
+
+      /*Nav List Item*/
+    .liNav{
+        border: 1px solid black;
+        border-radius: 50px;
+        padding: 0.2em 0.5em;
+        background-color: lightgray;
+        grid-area: ulh;
+    }
+
+      /*List Item*/
+    li{
+        list-style-type: none;
+    }
+
+      /*Links*/
+    a{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    }
+
+   #spaceDiv{
+    height: 1000px;
+   }
+
+  /*Whole Blog*/
+  .blogArticle{
+    background-color: rgba(211, 211, 211, 0.2);
+  }
+
+  /*1 Blog*/
+  #blog1{
+    grid-area: blog1;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px 3px #ff0000;
+    padding-top: 100px;
+  }
+
+  article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    grid-area: article;
+  }
+
+
+  #logo{
+    grid-area: logo;
+    padding-top: 100px;
+  }
+
+  #secondPic{
+    grid-area: 2p;
+    padding-top: 100px;
+  }
+
+  #thirdPic{
+    grid-area: 3p;
+    padding-top: 100px;
+  }
+
+  header{
+    grid-area: nav;
+}
+
+aside{
+    grid-area: sidebar;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px 3px lightgray;
+  }
+
+  #challengeMeMain{
+    grid-area: pvm;
+    justify-content: center;
+    align-content: center;
+    color: red;
+    padding-top: 100px;
+  }
+
+  button{
+    background-color: black;
+    color: red;
+    border: 1px solid red;
+    border-radius: 30px;
+  }
+
+  /*Picture in Blog*/
+  .blogPic{
+    width: 100%;
+  }
+
+  /*2 Bigger Blog Pictures*/
+  .blogPicExtern{
+    max-width: 50%;
+    border-radius: 200px;
+    margin-left: 130px;
+  }
+
+  /*H3 under Picture in Blog*/
+  .sectionH3{
+    grid-area: sh3;
+    padding-left: 25px;
+  }
+
+  /*P in Blog*/
+  .pSection{
+    grid-area: psec;
+    padding-left: 25px;
+  }
+
+  /*Autor Picture in Blog*/
+  .autorPic{
+    width: 50px;
+    height: 50px;
+    grid-area: ap;
+  }
+
+  /*Autor Name in Blog*/
+  .autorsName{
+    grid-area: an;
+  }
+
+  /*2 Blog*/
+  #blog2{
+    grid-area: blog2;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px 3px red;
+    padding-top: 100px;
+  }
+
+  /*3 Blog*/
+  #blog3{
+    grid-area: blog3;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px 3px red;
+    padding-top: 100px;
+  }
+
+  .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: baseline;
+  }
+
+  .pwmPicture{
+    width: 250px;
+    height: auto;
+  }
+
+  /*Footer*/
+  footer{
+    grid-area: ft;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:  auto;
+    grid-template-areas:
+    "si rl"
+    "si rl"
+    "si rl"
+    "si rl"
+    "si rl"
+    "pe pe";
+    gap: 2em;
+    row-gap: 2em;
+  }
+
+  .socialicons{
+    grid-area: si;
+  }
+
+  .relatedlinks{
+    grid-area: rl;
+    display: flex;
+  }
+
+  .pEnd{
+    grid-area: pe;
+    justify-content: center;
+    color: white;
+  }
+
+
+  .ulSocialIcons{
+    display: flex;
+    gap: 5em;
+  }
+
+  i{
+    color: lightgrey;
+  }
+
+  .ulUnderline, .pFooterUnderline{
+    text-decoration: underline;
+  }
+
+  .ulItalic, .pFooterItalic{
+    font-style: italic;
+  }
+
+  .ulBold, .pFooterBold{
+    font-weight: bold;
+  }
+
+  @media only screen and (max-width: 938px){
+    body{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nav nav"
+        "sidebar sidebar"
+        "blog1 blog1"
+        "blog2 blog2"
+        "blog3 blog3"
+        "pvm pvm"
+        "ft ft";
+        gap: 2em;
+        row-gap: 2em;
+    }
+    article{
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    /* body{
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows:  auto;
+        grid-template-areas:
+        "nav"
+        "sidebar"
+        "blog1"
+        "blog2"
+        "blog3"
+        "pvm"
+        "ft";
+        row-gap: 2em;
+        background-color: gray;
+    }
+    aside{
+       background-color: grey;
+       box-shadow: none;
+       border-radius: 0;
+      }
+      #blog1{
+        box-shadow: none;
+        border-radius: 0;
+        border-top: 1px solid black;
+      }
+      #blog2{
+        box-shadow: none;
+        border-radius: 0;
+        border-top: 1px solid black;
+      }
+      #blog3{
+        box-shadow: none;
+        border-radius: 0;
+        border-top: 1px solid black;
+      }
+      main{
+        border-top: 1px solid black;
+      }
+      footer{
+        border-top: 1px solid black;
+      }
+
+      footer{
+        grid-area: ft;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:  auto;
+        grid-template-areas:
+        "si"
+        "si"
+        "si"
+        "si"
+        "si"
+        "rl"
+        "rl"
+        "rl"
+        "rl"
+        "rl"
+        "pe";
+        row-gap: 1em;
+      }
+    
+      .socialicons{
+        grid-area: si;
+      }
+    
+      .relatedlinks{
+        grid-area: rl;
+      }
+    
+      .pEnd{
+        grid-area: pe;
+        color: white;
+      }
+    
+      i{
+        color: lightgrey;
+      }     */
+      body{
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer{
+        display: flex;
+        flex-direction: column;
+      }
+  }
