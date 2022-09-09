@@ -50,18 +50,6 @@ for (let section of navBarList) {
  * Adding Anchor links
 */
 
-// const aboutMe = document.querySelectorAll('li')[0]
-// aboutMe.innerHTML ='<a href="#blog1">About me</a>'
-
-// const mfo = document.querySelectorAll('li')[1]
-// mfo.innerHTML ='<a href="#blog2">My favorite Opening</a>'
-
-// const mfcp = document.querySelectorAll('li')[2]
-// mfcp.innerHTML ='<a href="#blog3">My favorite Chess Player</a>'
-
-// const challengeMe = document.querySelectorAll('li')[3]
-// challengeMe.innerHTML ='<a href="#challengeMeMain">Challenge me</a>'
-
 header.style.cssText =" position:sticky; background:#000; color: #ffffff; padding: 0 30px 30px 30px; top: 0; left: 10; ";
 mainNavBar.style.cssText ="border-bottom: 1px solid #f00;"
 
